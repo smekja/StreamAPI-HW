@@ -7,7 +7,8 @@ import java.util.stream.Stream;
 public class Homework1 {
 
     public static void printHomework() {
-        // 1. Napište program, který vezme pole Stringu A, b, C, De, fF, gHiJK, LmN a vrátí počet kapitálek v nejdelším retězci.
+        // 1. Napište program, který vezme pole Stringu A, b, C, De, fF, gHiJK, LmN a vrátí počet kapitálek
+        // v nejdelším retězci.
         String[] arr = {"A", "b", "C", "De", "fF", "gHiJK", "LmN"};
         Stream<String> stream = Stream.of(arr);
         // Filtering out all except the longest string

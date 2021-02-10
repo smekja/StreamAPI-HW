@@ -1,5 +1,7 @@
 package com.engeto.example;
 
+import com.sun.jdi.DoubleValue;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -7,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Homework3 {
@@ -38,8 +41,7 @@ public class Homework3 {
 
             // joining streams together + reducing the stream and calculating average
             Stream<Double> joinedStream2 = streamSupplier.get();
-            Optional<Double> reducedStream = joinedStream2.reduce((value, combinedValue) -> combinedValue + value);
-            Double average = reducedStream.get() / (double) count;
+            Double average = joinedStream2.collect(Collectors.averagingDouble(Double::doubleValue));
 
             // printing results
             System.out.println("First file: " + list1.toString());

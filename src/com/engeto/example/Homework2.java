@@ -8,11 +8,12 @@ import java.util.stream.Stream;
 
 public class Homework2 {
     public static void printHomework() {
-        // 2. Napište program, který přečte soubor (priklad2.txt) a spočítá počet znaků na každém řádku, který neobsahuje číslici.
+        // 2. Napište program, který přečte soubor (priklad2.txt) a spočítá počet znaků na každém řádku,
+        // který neobsahuje číslici.
+
         // file loading
         try (BufferedReader inputStream = new BufferedReader( new FileReader("resources\\priklad2.txt"));) {
             System.out.println("Homework 2");
-            // stream creation from the file(BufferReader)
             Stream<String> stream1 = inputStream.lines();
             // filtering out lines with numbers and outputting the size of the string
             stream1
