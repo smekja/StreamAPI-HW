@@ -1,5 +1,3 @@
-# java2_lekce_03_domaci_ukol
-
 Vašim domácím úkolem je implementovat následující příklady pomocí Stream API:
 
 1. Napište program, který vezme pole Stringu A, b, C, De, fF, gHiJK, LmN a vrátí počet kapitálek v nejdelším retězci.
